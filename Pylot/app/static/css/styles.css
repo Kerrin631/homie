@@ -1,0 +1,37 @@
+* {
+  font-family: monaco;
+}
+.sidebar{
+	display: inline-block;
+	width: 150px;
+	border-right: 1px solid black;
+	height: 600px;
+}
+.sidebar img{
+	margin-bottom: 30px;
+}
+.sidebar a{
+	display: block;
+	margin: 0px 0px 30px 30px;
+}
+.sidebar p{
+	display: block;
+	margin: 0px 0px 30px 30px;
+}
+
+.friends{
+	display: inline-block;
+	vertical-align: top;
+	position: center;
+	text-align: center;
+	background-color: lightgray;
+	margin-left: 200px;
+
+}
+.friends p{
+	width: 600px;
+}
+#messages{
+	display: inline-block;
+	vertical-align: top;
+}
