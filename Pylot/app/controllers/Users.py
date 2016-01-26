@@ -4,10 +4,9 @@ class Users(Controller):
     def __init__(self, action):
         super(Users, self).__init__(action)
         self.load_model('User')
+        self.load_model('Message')
 
     def index(self):
-
-
         return self.load_view('index.html')
 
     def register(self):
@@ -65,3 +64,5 @@ class Users(Controller):
 
     def register_page(self):
         return self.load_view('register.html')
+
+

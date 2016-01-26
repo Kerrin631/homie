@@ -26,6 +26,8 @@ routes['GET']['/friends_page'] = 'Users#friends_page'
 routes['GET']['/messages_page'] = 'Users#messages_page'
 routes['GET']['/communicate'] = 'Users#communicate'
 routes['GET']['/register_page'] = 'Users#register_page'
+routes['POST']['/post_message'] = 'Messages#post_message'
+
 """
     You can add routes and specify their handlers as follows:
 

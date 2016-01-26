@@ -13,14 +13,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="sidebar">
+	<div class="container col-md-2 pull-left sidebar" style="inline-block">
 		<img src="/static/images/logo.png" alt="logo"><br>
 
-		<a href="/profile">Profile</a><br>
-		<a href="/friends_page">Find Friends</a><br>
-		<p>Messages</p>
+		<a href="/profile"><button type="button" class="btn btn-primary">Profile</button></a><br>
+
+
+		<a href="/friends_page"><button type="button" class="btn btn-primary">Find Friends</button></a><br>
+
+
+		<a><button type="button" class="btn btn-default" disabled="disabled">Messages</button></a>
+
+
 	</div>
-	<div id="messages">
+	<div class="container col-md-9 messages" style="inline-block">
 		<nav>
 		  <ul class="pagination">
 		    <li>
@@ -40,6 +46,29 @@
 		    </li>
 		  </ul>
 		</nav>
+	</div>
+	
+	<div class="container col-md-9" style="inline-block">
+		
+		<h1>Leave a message for </h1>
+		<div class="form-group">
+			<form action="/post_message" method="post">
+				<input type="textarea" class="form-control" rows="5" name="content">
+
+		  		<button class='btn btn-primary pull-right'>Post</button>
+
+		  	</form>
+		</div>
+		
+			<label> wrote:</label>
+			<textarea readonly class="form-control" rows="5" name="content"></textarea>
+		
+		<div class="row">
+			<div class="col-md-11 pull-right">
+				<label> wrote:</label>
+				<textarea readonly class="form-control" rows="5" name="content"></textarea>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

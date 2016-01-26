@@ -23,10 +23,27 @@
 	display: inline-block;
 	vertical-align: top;
 	position: center;
-	text-align: center;
+	/*text-align: center;*/
 	background-color: lightgray;
 	margin-left: 200px;
-
+}
+.friends img{
+	display: block;
+    margin: 0 auto;
+}
+.friends p{
+	text-align: center;
+}
+.friends button{
+	display: block;
+    margin: 0 auto;
+}
+#stats{
+	display: inline-block;
+	width: 180px;
+}
+#match{
+	margin-left: 300px;
 }
 .friends p{
 	width: 600px;
