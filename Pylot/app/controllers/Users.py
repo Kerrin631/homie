@@ -67,3 +67,6 @@ class Users(Controller):
         return self.load_view('register.html')
 
 
+    def logout(self):
+        session.clear()
+        return redirect('/')
