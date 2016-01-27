@@ -23,6 +23,12 @@
 
 	<div class="friends">
 		<img src="/static/images/kerrin.png" height="300" width="180">
+		{{current_user['first_name']}}
+		<form action="/home/{{current_user['id']}}" method="post">
+			<input type="submit" value="YES" name="is_match">
+			<input type="submit" value="NO" name="is_match">
+		</form>
+
 		<br>
 		<h3>Name / Age</h3>
 		<h3>location</h3>

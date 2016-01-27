@@ -42,8 +42,9 @@ class Users(Controller):
                 flash(message, 'Login_errors')
             return redirect('/')
         else:
-            session['name'] = status['user']['first_name']
-            return redirect('/home')
+            session['id'] = status['user']['id']
+            print session['id']
+            return redirect('/process_home')
 
     def success(self):
         return self.load_view('success.html')
