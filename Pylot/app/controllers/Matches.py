@@ -26,5 +26,11 @@ class Matches(Controller):
             "is_match": request.form['is_match']
         }
         self.models['Match'].add_match(match_info)
+
         return redirect ('/process_home')
 
+
+
+
+# if other person says yes = match
+# if no then = NULL
