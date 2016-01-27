@@ -10,7 +10,11 @@ class Messages(Controller):
     def post_message(self):
     	print 'HELLOHELLO'
     	print request.form['content']
-    	# message_cont = {
-    	# 	'message' : request.form['content']
-    	# }
+    	print session['id']
+    	print session['name']
+    	message_cont = {
+    		'message' : request.form['content'],
+    		"user_id" : session['id']
+    	}
+    	self.models['Message'].add_message(message_cont)
     	return redirect('/communicate')
