@@ -72,3 +72,6 @@ class Users(Controller):
         pass
 
 
+    def logout(self):
+        session.clear()
+        return redirect('/')
