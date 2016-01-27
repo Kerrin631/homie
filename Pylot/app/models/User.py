@@ -58,13 +58,16 @@ class User(Model):
             query = 'Select * From users Where email = %s'
             data = [user_info['email']]
             user = self.db.query_db(query,data)
-
             if len(user) > 0:
                 if self.bcrypt.check_password_hash(user[0]['password'], user_info['password']):
                     return {'status' : True, 'user' : user[0]}
                 else:
+                    print
                     errors.append('Password or Email is Invalid')
                     return {'status' : False, 'errors': errors}
             else:
                 errors.append('Email was not found')
                 return {'status' : False, 'errors': errors}
+
+    def get_users(self):
+        return self.db.query_db("SELECT * from users")
