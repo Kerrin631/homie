@@ -21,6 +21,7 @@ class Users(Controller):
 
         status = self.models['User'].process_login(user_info)
         session['id'] = status['user']['id']
+        print 0
         return redirect('/process_home')
 
     #     create_status = self.models['User'].register_user(user_info)
