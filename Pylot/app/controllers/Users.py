@@ -67,7 +67,7 @@ class Users(Controller):
         return redirect('/communicate')
 
     def register_page(self):
-        return self.load_view('register.html')
+        return self.load_view('register.html') 
 
     def logout(self):
         session.clear()
