@@ -73,6 +73,7 @@ class Users(Controller):
         session.clear()
         return redirect('/')
 
+
     def about_me(self):
         latitude = request.form['lat']
         longitude = request.form['long']
@@ -98,5 +99,9 @@ class Users(Controller):
     #     return redirect('/profile')
 
 
+    def about(self):
+        return self.load_view('about.html')
 
+    def contact(self):
+        return self.load_view('contact.html')
 
