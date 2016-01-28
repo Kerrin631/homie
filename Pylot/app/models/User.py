@@ -82,4 +82,10 @@ class User(Model):
         id_data = [user_id]
         return self.db.query_db(user_id_query, id_data)
 
+    def get_location_by_id(self, id):
+        user_query = "SELECT * FROM users WHERE id = %s LIMIT 1"
+        user_data = [id]
+        return self.db.query_db(user_query, user_data)[0]
+
+
 
