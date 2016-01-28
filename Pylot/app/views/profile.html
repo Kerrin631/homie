@@ -56,6 +56,7 @@
 	<p class="text-center">Allow Homie to access your location?</p>
 
 <button class="btn btn-info center-block" id='getLoc'>Allow</button>
+<h3 class="text-center text-success"id="demo" value='demo'></h3>
 			<!-- <p id="demo" value='demo'></p> -->
 
 
@@ -97,10 +98,10 @@
 				<input type='submit' value'submit'>
 			</form> -->
 <!-- Below section used to determine the Longitude/Latitude -->
-				<!-- <p>Allow Homie to access your location?</p>
+				<!-- <p>Allow Homie to access your location?</p> -->
 
-<button class="btn btn-info" id='getLoc'>Allow</button>
-			<p id="demo" value='demo'></p> -->
+<!-- <button class="btn btn-info" id='getLoc'>Allow</button> -->
+			<!-- <p id="demo" value='demo'></p> -->
 			<!-- <input id="demo"> -->
 
 			<script>
@@ -120,8 +121,7 @@
 				$('#long').val(longitude);
 				$('#lat').val(latitude);
 
-			    x.innerHTML = "Latitude: " + position.coords.latitude + 
-			    "<br>Longitude: " + position.coords.longitude;	
+			    x.innerHTML = "Thank you for sharing your location!"
 			}
 			// ajax
 				// $.ajax({
