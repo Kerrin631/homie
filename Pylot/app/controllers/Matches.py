@@ -29,8 +29,5 @@ class Matches(Controller):
 
         return redirect ('/process_home')
 
-
-
-
 # if other person says yes = match
 # if no then = NULL
