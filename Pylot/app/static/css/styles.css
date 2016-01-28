@@ -71,3 +71,67 @@ h3{
 	display: inline-block;
 	vertical-align: top;
 }
+
+.sidebar{
+	background-color: rgb(234,210,172);
+
+}
+.sidebar a{
+	display: inline-block;
+	text-align: center;
+	background-color: rgb(226,109,92);
+	margin: 0 auto;
+	color: rgb(25,25,112);
+	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;;
+	 	letter-spacing:0.1em;
+    text-align:center;
+    /*margin: 40px auto;*/
+    text-transform: lowercase;
+    /*line-height: 200%;*/
+    font-size: 14pt;
+    font-variant: small-caps;
+    margin-bottom: 10px;
+}
+
+	.sidebar img{
+		margin-left: 25px;
+		/*border-radius: 1px solid black;*/
+		width: 100px;
+		height: 100px;
+
+	}
+
+	/* Change the link color on hover */
+	#sidebar1 li a:hover {
+		background-color: rgb(230,184,156);
+
+	}
+
+.about_us{
+	width: 1250px;
+	height: 600px;
+	display: inline-block;
+	vertical-align: top;
+	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;;
+	 	letter-spacing:0.1em;
+    text-align:center;
+    margin: 40px auto;
+    text-transform: lowercase;
+    /*line-height: 200%;*/
+    font-size: 14pt;
+    font-variant: small-caps;
+    margin-bottom: 10px;
+    background-color: rgb(156,175,183);
+    margin-top: 0px;
+}
+	.about_us h1{
+		display: inline-block;
+}
+	.about_us h3{
+		margin-bottom: 40px;
+		/*display: inline-block;*/
+	}
+
+	.about_us p{
+		display: inline-block;
+	}
