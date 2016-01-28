@@ -185,3 +185,7 @@ h3{
   background-color: rgb(156,175,183);
 
 }
+
+.team-member img{
+  border: 1px solid black;
+}
