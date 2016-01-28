@@ -26,3 +26,6 @@ routes['GET']['/process_home'] = 'Matches#process_home'
 routes['GET']['/home/<friend_id>'] = 'Matches#home'
 routes['POST']['/home/<friend_id>'] = 'Matches#process_match'
 
+
+routes['POST']['/process_login'] = 'Users#process_login'
+

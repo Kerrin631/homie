@@ -38,6 +38,7 @@
 
 </head>
 <body>
+<<<<<<< HEAD
 	<!-- <div class="container col-md-12"> -->
 		<div class="sidebar col-md-1.5">
 	      <img src="/static/images/logo1.png" alt="logo.png" class="img-circle">
@@ -58,6 +59,17 @@
 
 		<button class="btn btn-info center-block" id='getLoc'>Allow</button>
 			<p id="demo" value='demo'></p>
+
+
+	<h4 class="text-center text-info">Allow Homie to access your location?</h4>
+
+<button class="btn btn-info center-block" id='getLoc'>Allow</button>
+<h3 class="text-center text-success"id="demo" value='demo'></h3>
+			<!-- <p id="demo" value='demo'></p> -->
+
+
+	<div class="form-group col-md-10 pull-right">
+
 			<form action="/about_me" method="post" id="location">
 				About Me:<input type="textarea" class="form-control" rows="5" name="content" placeholder="Tell me about yourself..."><br>
 
@@ -95,10 +107,10 @@
 				<input type='submit' value'submit'>
 			</form> -->
 <!-- Below section used to determine the Longitude/Latitude -->
-				<!-- <p>Allow Homie to access your location?</p>
+				<!-- <p>Allow Homie to access your location?</p> -->
 
-<button class="btn btn-info" id='getLoc'>Allow</button>
-			<p id="demo" value='demo'></p> -->
+<!-- <button class="btn btn-info" id='getLoc'>Allow</button> -->
+			<!-- <p id="demo" value='demo'></p> -->
 			<!-- <input id="demo"> -->
 
 			<script>
@@ -118,8 +130,12 @@
 				$('#long').val(longitude);
 				$('#lat').val(latitude);
 
+<<<<<<< HEAD
 			    x.innerHTML = "Latitude: " + position.coords.latitude +
 			    "<br>Longitude: " + position.coords.longitude;
+=======
+			    x.innerHTML = "Thank you for sharing your location!"
+>>>>>>> 9bf4c95aa3a2088c38cf8c31849727769a7c15e2
 			}
 			// ajax
 				// $.ajax({
