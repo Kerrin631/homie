@@ -70,3 +70,9 @@ class Users(Controller):
     def logout(self):
         session.clear()
         return redirect('/')
+
+    def about(self):
+        return self.load_view('about.html')
+
+    def contact(self):
+        return self.load_view('contact.html')
