@@ -61,7 +61,7 @@ class Users(Controller):
         return redirect('/home')
 
     def communicate(self):
-        return self.load_view('messages.html') 
+        return self.load_view('messages.html')
 
     def messages_page(self):
         return redirect('/communicate')
