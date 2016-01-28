@@ -45,9 +45,8 @@ class Matches(Controller):
 
         return redirect ('/process_home')
 
+
 # end like/dislike buttons ----------->>>
-
-
 
 # if other person says yes = match
 # if no then = NULL
