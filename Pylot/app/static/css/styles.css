@@ -1,5 +1,19 @@
 * {
-  font-family: monaco;
+
+}
+h3{
+	margin: 0px;
+}
+#stats{
+	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;;
+  letter-spacing:0.1em;
+	text-align:center;
+	/*margin: 40px auto;*/
+	text-transform: lowercase;
+	/*line-height: 200%;*/
+	font-size: 14pt;
+	font-variant: small-caps;
+	margin-bottom: 10px;
 }
 .sidebar{
 	display: inline-block;
@@ -21,8 +35,8 @@
 
 .friends{
 	display: inline-block;
-	vertical-align: top;
-	position: center;
+	/*vertical-align: top;*/
+	/*position: center;*/
 	/*text-align: center;*/
 	background-color: lightgray;
 	margin-left: 200px;
@@ -32,7 +46,15 @@
     margin: 0 auto;
 }
 .friends p{
-	text-align: center;
+	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;;
+  letter-spacing:0.1em;
+	text-align:center;
+	/*margin: 40px auto;*/
+	text-transform: lowercase;
+	line-height: 125%;
+	font-size: 14pt;
+	font-variant: small-caps;
+	width: 600px;
 }
 .friends button{
 	display: block;
@@ -44,9 +66,6 @@
 }
 #match{
 	margin-left: 300px;
-}
-.friends p{
-	width: 600px;
 }
 #messages{
 	display: inline-block;

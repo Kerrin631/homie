@@ -11,7 +11,6 @@ class Messages(Controller):
     	print 'HELLOHELLO'
     	print request.form['content']
     	print session['id']
-    	print session['name']
     	message_cont = {
     		'message' : request.form['content'],
     		"user_id" : session['id']

@@ -1,4 +1,5 @@
 from system.core.controller import *
+from geopy.geocoders import Nominatim
 
 class Users(Controller):
     def __init__(self, action):
@@ -22,6 +23,7 @@ class Users(Controller):
 
         if create_status['status'] == True:
             session['id'] = create_status['user']['id']
+            print session['id']
             return redirect('/success')
         else:
             for message in create_status['errors']:
@@ -52,7 +54,8 @@ class Users(Controller):
         return self.load_view('home.html')
 
     def profile(self):
-        return self.load_view('profile.html')
+        about = self.models['User'].get_aboutMe_by_id(session['id'])
+        return self.load_view('profile.html', about = about)
 
     def friends_page(self):
         return redirect('/home')
@@ -69,9 +72,31 @@ class Users(Controller):
     def logout(self):
         session.clear()
         return redirect('/')
-        pass
+
+    def about_me(self):
+        latitude = request.form['lat']
+        longitude = request.form['long']
+        my_info = {
+            'content' : request.form['content'],
+            'user' : session['id'],
+            'gender' : request.form['gender'],
+            'latitude' : latitude,
+            'longitude' : longitude,
+            'age' : request.form['age']
+        }
+        self.models['User'].add_user_info(my_info)
+        # geolocator
+        geolocator = Nominatim()
+        location = geolocator.reverse(request.form['lat'] + ',' + request.form['long'])
+        print(location.address)
+        print my_info
+        # end geolocator
+        return redirect('/profile')
+
+    # def get_info(self, id):
+
+    #     return redirect('/profile')
 
 
-    def logout(self):
-        session.clear()
-        return redirect('/')
+
+

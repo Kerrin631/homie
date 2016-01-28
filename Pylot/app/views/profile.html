@@ -11,6 +11,30 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+
+    	$('#getLoc').click(function(){
+
+			    if (navigator.geolocation) {
+			        navigator.geolocation.getCurrentPosition(showPosition);
+			    } else { 
+			        x.innerHTML = "Geolocation is not supported by this browser.";
+			    }
+			
+    	});
+
+    	$('#about_me').submit(function(){
+    		$.post('/about_me', $(this).serialize(), function(res) {});
+  
+    		return false;
+    	})
+    })
+    </script>
+
 </head>
 <body>
 	<div class="container col-md-2 pull-left sidebar" style="inline-block">
@@ -27,8 +51,96 @@
 		<a href="/log_out"><button type="button" class="btn btn-primary">Log Out</button></a><br>
 	</div>
 	<!-- <h1>profile</h1> -->
-	
-		<button>hi</button>
-	</form>
+	<br>
+	<br>
+	<p class="text-center">Allow Homie to access your location?</p>
+
+<button class="btn btn-info center-block" id='getLoc'>Allow</button>
+			<!-- <p id="demo" value='demo'></p> -->
+
+
+	<div class="form-group col-md-10 pull-right">
+			<form action="/about_me" method="post" id="location">
+				About Me:<input type="textarea" class="form-control" rows="5" name="content" placeholder="Tell me about yourself..."><br>
+
+				<div class="col-xs-2">
+				    Age:<input type="text" class="form-control" name="age" placeholder="Age">
+			  </div><br><br><br>
+
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="gender" id="optionsRadios1" value="Male" checked>
+				    Male
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="gender" id="optionsRadios2" value="Female">
+				    Female
+				  </label><br>
+				  <input type="hidden" id='lat' name='lat'>
+				<input type="hidden" id='long' name='long'>
+				</div>
+				<button class='btn btn-primary center-block'>Post</button>
+			</form>
+			<br><br>
+			{% for x in about %}
+			{% if x['profile_info'] != ''%}
+			<textarea class="form-control" type="text" placeholder="About you!" readonly>{{ x['profile_info'] }}</textarea>
+			{% endif %}
+			{% endfor %}
+
+<br><br><br>
+			<!-- <form id='location'>
+				<input id='lat' name='lat'>
+				<input id='long' name='long'>
+				<input type='submit' value'submit'>
+			</form> -->
+<!-- Below section used to determine the Longitude/Latitude -->
+				<!-- <p>Allow Homie to access your location?</p>
+
+<button class="btn btn-info" id='getLoc'>Allow</button>
+			<p id="demo" value='demo'></p> -->
+			<!-- <input id="demo"> -->
+
+			<script>
+			var x = document.getElementById("demo");
+			// function getLocation() {
+			//     if (navigator.geolocation) {
+			//         navigator.geolocation.getCurrentPosition(showPosition);
+			//     } else { 
+			//         x.innerHTML = "Geolocation is not supported by this browser.";
+			//     }
+			// }
+			function showPosition(position) {
+				var latitude = position.coords.latitude
+				var longitude = position.coords.longitude
+				// $.alert(latitude)
+
+				$('#long').val(longitude);
+				$('#lat').val(latitude);
+
+			    x.innerHTML = "Latitude: " + position.coords.latitude + 
+			    "<br>Longitude: " + position.coords.longitude;	
+			}
+			// ajax
+				// $.ajax({
+			 //        type: "POST",
+			 //        url: "/location",
+			 //        data:{latitude: latitude, longitude: longitude}
+
+			        // success: function(msg) {
+			            // $("#pass_location").val();
+			        // }
+			    // });
+			    // console.log(data)
+			// ajax
+
+			</script>
+<!-- Geolocation done -->
+		  		
+
+		  	</form>
+		</div>
 </body>
 </html>

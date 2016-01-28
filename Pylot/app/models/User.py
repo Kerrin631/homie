@@ -71,3 +71,15 @@ class User(Model):
 
     def get_users(self):
         return self.db.query_db("SELECT * from users")
+
+    def add_user_info(self, info):
+        query = "UPDATE users SET profile_info = (%s), age = (%s), gender = (%s), latitude = (%s), longitude = (%s) WHERE id = (%s)"
+        data = [info['content'], info['age'], info['gender'], info['latitude'], info['longitude'], info['user']]
+        return self.db.query_db(query,data)
+
+    def get_aboutMe_by_id(self, user_id):
+        user_id_query = "SELECT * FROM users WHERE id = %s LIMIT 1"
+        id_data = [user_id]
+        return self.db.query_db(user_id_query, id_data)
+
+
