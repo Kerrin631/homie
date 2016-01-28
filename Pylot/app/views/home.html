@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Find Friends</title>
-	<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+	
 
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 
@@ -15,68 +15,30 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
 
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">HOMIE</a>
-        <!-- <img src="/static/images/logo.png"> -->
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/logout">Logout</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Settings <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQS</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-	<div class="container col-md-2 pull-left sidebar" style="inline-block">
-		<img src="/static/images/logo.png" alt="logo"><br>
+  <div class="sidebar">
+    <img src="/static/images/logo1.png" alt="logo.png" class="img-circle">
+    <ul class="nav nav-pills nav-stacked span3" id="sidebar1" >
+      <li><a href="/home">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/profile" >Profile</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+      <li><a href="#">Team</a></li>
+      <li><a href="/logout">Log Out</a></li>
+    </ul>
+  </div>
 
-		<a href="/profile"><button type="button" class="btn btn-primary">Profile</button></a><br>
-
-		<a><button type="button" class="btn btn-default" disabled="disabled">Find Friends</button></a><br>
-
-		<a href="/messages_page"><button type="button" class="btn btn-primary">Messages</button></a><br>
-	</div>
 
 	<div class="friends">
-    <a href="/logout">Logout</a>
 		<img src="/static/images/kerrin.png" height="300" width="180">
-		{{current_user['first_name']}}
+		
 		<form action="/home/{{current_user['id']}}" method="post">
-			<input type="submit" value="YES" name="is_match">
-			<input type="submit" value="NO" name="is_match">
+			<input type="submit" class="btn btn-danger btn-sm" value="X" name="is_match">
+      <input type="submit" class="btn btn-success btn-lg" value="√" name="is_match">
 		</form>
 
 		<br>
@@ -84,11 +46,12 @@
 
 		<!-- profile information -->
 		<div id="stats">
-			<h3>Name / Age</h3>
-			<h3>location</h3>
+			<h3>{{current_user['first_name']}} {{current_user['last_name']}} / {{current_user['age']}}</h3>
+			<h3>{{distance}} Miles away</h3>
 		</div>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>{{current_user['profile_info']}}<p>
+		<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
 	</div>
 </body>
 </html>
