@@ -1,0 +1,187 @@
+* {
+
+}
+h3{
+	margin: 0px;
+}
+#stats{
+	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;;
+  letter-spacing:0.1em;
+	text-align:center;
+	/*margin: 40px auto;*/
+	text-transform: lowercase;
+	/*line-height: 200%;*/
+	font-size: 14pt;
+	font-variant: small-caps;
+	margin-bottom: 10px;
+}
+.sidebar{
+	display: inline-block;
+	width: 150px;
+	border-right: 1px solid black;
+	height: 600px;
+}
+.sidebar img{
+	margin-bottom: 30px;
+}
+.sidebar a{
+	display: block;
+	margin: 0px 0px 30px 30px;
+}
+.sidebar p{
+	display: block;
+	margin: 0px 0px 30px 30px;
+}
+
+.friends{
+	display: inline-block;
+	/*vertical-align: top;*/
+	/*position: center;*/
+	/*text-align: center;*/
+	background-color: lightgray;
+	margin-left: 200px;
+}
+.friends img{
+	display: block;
+    margin: 0 auto;
+}
+.friends p{
+	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;;
+  letter-spacing:0.1em;
+	text-align:center;
+	/*margin: 40px auto;*/
+	text-transform: lowercase;
+	line-height: 125%;
+	font-size: 14pt;
+	font-variant: small-caps;
+	width: 600px;
+}
+.friends button{
+	display: block;
+    margin: 0 auto;
+}
+#stats{
+	display: inline-block;
+	width: 180px;
+}
+#match{
+	margin-left: 300px;
+}
+#messages{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.sidebar{
+	background-color: rgb(234,210,172);
+  display: inline-block;
+  vertical-align: top;
+}
+.sidebar a{
+	display: inline-block;
+	text-align: center;
+	background-color: rgb(226,109,92);
+	margin: 0 auto;
+	color: rgb(25,25,112);
+	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;;
+	 	letter-spacing:0.1em;
+    text-align:center;
+    /*margin: 40px auto;*/
+    text-transform: lowercase;
+    /*line-height: 200%;*/
+    font-size: 14pt;
+    font-variant: small-caps;
+    margin-bottom: 10px;
+}
+
+	.sidebar img{
+		margin-left: 25px;
+		/*border-radius: 1px solid black;*/
+		width: 100px;
+		height: 100px;
+
+	}
+
+	/* Change the link color on hover */
+	#sidebar1 li a:hover {
+		background-color: rgb(230,184,156);
+
+	}
+
+.about_us{
+	width: 1250px;
+	height: 600px;
+	display: inline-block;
+	vertical-align: top;
+	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;;
+	 	letter-spacing:0.1em;
+    text-align:center;
+    margin: 40px auto;
+    text-transform: lowercase;
+    /*line-height: 200%;*/
+    font-size: 14pt;
+    font-variant: small-caps;
+    margin-bottom: 10px;
+    background-color: rgb(156,175,183);
+    margin-top: 0px;
+}
+	.about_us h1{
+		display: inline-block;
+}
+	.about_us h3{
+		margin-bottom: 40px;
+		/*display: inline-block;*/
+	}
+
+	.about_us p{
+		display: inline-block;
+	}
+
+/* CSS FOR PROFILE PAGE */
+
+.text-center{
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+#getLoc{
+  vertical-align: top;
+}
+
+/*#location{
+  display: inline-block;
+  vertical-align: top;
+}
+*/
+
+/*#content{
+  margin-left: 0px;
+}
+*/
+
+.team-member{
+  text-align: center;
+}
+
+#team{
+  display: inline-block;
+  float: right;
+  background-color: rgb(156,175,183);
+  /*margin-top: 50px;*/
+}
+
+#body{
+  margin: 0 auto;
+  margin-left: 0px;
+}
+
+/*.container{
+  margin-left: 0px;
+  text-align: left;
+}
+*/
+
+#content{
+  background-color: rgb(156,175,183);
+
+}
