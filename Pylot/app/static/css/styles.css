@@ -74,7 +74,8 @@ h3{
 
 .sidebar{
 	background-color: rgb(234,210,172);
-
+  display: inline-block;
+  vertical-align: top;
 }
 .sidebar a{
 	display: inline-block;
@@ -135,3 +136,52 @@ h3{
 	.about_us p{
 		display: inline-block;
 	}
+
+/* CSS FOR PROFILE PAGE */
+
+.text-center{
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+#getLoc{
+  vertical-align: top;
+}
+
+/*#location{
+  display: inline-block;
+  vertical-align: top;
+}
+*/
+
+/*#content{
+  margin-left: 0px;
+}
+*/
+
+.team-member{
+  text-align: center;
+}
+
+#team{
+  display: inline-block;
+  float: right;
+  background-color: rgb(156,175,183);
+  /*margin-top: 50px;*/
+}
+
+#body{
+  margin: 0 auto;
+  margin-left: 0px;
+}
+
+/*.container{
+  margin-left: 0px;
+  text-align: left;
+}
+*/
+
+#content{
+  background-color: rgb(156,175,183);
+
+}

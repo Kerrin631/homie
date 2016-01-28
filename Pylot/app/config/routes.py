@@ -10,6 +10,7 @@ routes['GET']['/messages_page'] = 'Users#messages_page'
 routes['GET']['/communicate'] = 'Users#communicate'
 routes['GET']['/register_page'] = 'Users#register_page'
 routes['GET']['/logout'] = 'Users#logout'
+routes['GET']['/team'] = 'Users#team'
 
 routes['POST']['/about_me'] = 'Users#about_me'
 routes['POST']['/location'] = 'Users#location'
