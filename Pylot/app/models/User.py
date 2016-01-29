@@ -17,6 +17,7 @@ class User(Model):
             return False
 
     def process_login(self,user_info):
+        print "here1"
         if self.is_user_not_in_db(user_info['clientID']):
             query = "INSERT INTO users (first_name,last_name,email,clientID,accessToken) \
             VALUES (%s,%s,%s,%s,%s)"
@@ -27,7 +28,6 @@ class User(Model):
             user = self.db.query_db(get_user)
             return {'status' : True , 'user' : user[0]}
         else:
-            print "over there"
             query = "SELECT * FROM users Where email = %s"
             data = [user_info['email']]
             user = self.db.query_db(query,data)
