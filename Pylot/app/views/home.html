@@ -35,26 +35,31 @@
 
 
 	<div class="friends">
-  
+    {% if current_user != 0 %}
     <img src="{{pic}}" height="300" width="300">
     
 		<form action="/home/{{current_user['id']}}" class="text-centered" method="post">
-			<input type="submit" class="btn btn-danger btn-sm" value="X" name="is_match">
-      <input type="submit" class="btn btn-success btn-lg" value="√" name="is_match">
+			<input type="submit" class="btn btn-danger btn-sm" value="YES" name="is_match">
+      <input type="submit" class="btn btn-success btn-lg" value="NO" name="is_match">
 		</form>
 
 		<br>
 
 
 		<!-- profile information -->
+    
 		<div id="stats" class="text-center">
 			<h3>{{current_user['first_name']}} {{current_user['last_name']}}</h3>
       <h3>{{current_user['age']}}</h3>
 			<h4>{{distance}} Miles away</h4>
 		</div>
+    {%else%}
+    <h1>Please invite more people to join our community!</h1>
+    {% endif %}
 
     <p>{{current_user['profile_info']}}<p>
 		<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+    <!-- Comment -->
 	</div>
   
 </body>
