@@ -35,7 +35,7 @@
 
 
 	<div class="friends">
-		<img src="/static/images/kerrin.png" height="300" width="180">
+    <img src="{{pic}}" height="300" width="300">
 		
 		<form action="/home/{{current_user['id']}}" method="post">
 			<input type="submit" class="btn btn-danger btn-sm" value="X" name="is_match">
@@ -47,7 +47,8 @@
 
 		<!-- profile information -->
 		<div id="stats">
-			<h3>{{current_user['first_name']}} {{current_user['last_name']}} / {{current_user['age']}}</h3>
+			<h3>{{current_user['first_name']}} {{current_user['last_name']}}</h3>
+      <h3>{{current_user['age']}}</h3>
 			<h3>{{distance}} Miles away</h3>
 		</div>
 
