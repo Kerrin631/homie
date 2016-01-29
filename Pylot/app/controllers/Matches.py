@@ -21,19 +21,15 @@ class Matches(Controller):
         #if that match value == null && location is within range
         #then bring up the new picture
         current_user = self.models['Match'].get_user_by_id(friend_id)
-        print current_user['profile_info']
-        print session['id']
-        # print session['latitude']
-        # print session['longitude']
+
         user_info = self.models['User'].get_location_by_id(session['id'])
-        user_location = user_info['latitude'] + ',' + user_info['longitude']
-        friend_location = current_user['latitude'] + ',' + current_user['longitude']
-        print user_info
-        print user_location
-        print friend_location
+        user_location = str(user_info['latitude']) + ',' + str(user_info['longitude'])
+        friend_location = str(current_user['latitude']) + ',' + str(current_user['longitude'])
+
         print (vincenty(user_location, friend_location).miles)
         distance = (vincenty(user_location, friend_location).miles)
-        return self.load_view('home.html', current_user=current_user, distance = distance)
+        pic = "https://graph.facebook.com/v2.5/" + current_user['clientID'] + "/picture?width=350&height=350"
+        return self.load_view('home.html', current_user=current_user, distance = distance, pic=pic)
 
     def process_match(self,friend_id):
         match_info = {
