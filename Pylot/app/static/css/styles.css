@@ -7,13 +7,13 @@ h3{
 #stats{
 	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;;
   letter-spacing:0.1em;
-	text-align:center;
-	/*margin: 40px auto;*/
+	/*text-align:center;*/
+	margin: 40px auto;
 	text-transform: lowercase;
 	/*line-height: 200%;*/
 	font-size: 14pt;
 	font-variant: small-caps;
-	margin-bottom: 10px;
+	margin: 10px 0px 10px 210px;
 }
 .sidebar{
 	display: inline-block;
@@ -38,12 +38,16 @@ h3{
 	/*vertical-align: top;*/
 	/*position: center;*/
 	/*text-align: center;*/
-	background-color: lightgray;
-	margin-left: 200px;
+	background-color: #4281A4;
+	margin-left: 300px;
+	margin-top: 100px;
+	padding: 20px;
+	border-radius: 30px;
 }
 .friends img{
 	display: block;
     margin: 0 auto;
+    border-radius: 30px;
 }
 .friends p{
 	font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;;
@@ -56,9 +60,10 @@ h3{
 	font-variant: small-caps;
 	width: 600px;
 }
-.friends button{
+.friends form{
 	display: block;
-    margin: 0 auto;
+	margin-top: 20px;
+    margin-left: 260px;
 }
 #stats{
 	display: inline-block;
@@ -169,6 +174,8 @@ h3{
   display: inline-block;
   float: right;
   background-color: rgb(156,175,183);
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;;
+	 	letter-spacing:0.1em;
   /*margin-top: 0px;*/
   /*margin-top: 50px;*/
 }
@@ -196,3 +203,9 @@ body{
   background-color: rgb(156,175,183);
 
 }
+#login{
+	margin: 100px 450px;
+	/*background-color: blue;*/
+}
+
+

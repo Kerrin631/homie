@@ -28,7 +28,7 @@ class Matches(Controller):
 
         print (vincenty(user_location, friend_location).miles)
         distance = (vincenty(user_location, friend_location).miles)
-        pic = "https://graph.facebook.com/v2.5/" + current_user['clientID'] + "/picture?width=350&height=350"
+        pic = "https://graph.facebook.com/v2.5/" + str(current_user['clientID']) + "/picture?width=350&height=350"
         return self.load_view('home.html', current_user=current_user, distance = distance, pic=pic)
 
     def process_match(self,friend_id):
