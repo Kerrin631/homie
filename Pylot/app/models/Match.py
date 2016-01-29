@@ -11,9 +11,7 @@ class Match(Model):
         self.db.query_db(query,data)
         if match_info['is_match'] == "YES":
             if self.find_is_matched(match_info['friend_id'],match_info['user_id']) != []:
-                print self.find_is_matched(match_info['friend_id'],match_info['user_id'])
-                return {"match": True}
-        return {"match": False}
+                print "match"
 
 
     def get_potential_user(self,user_id):
@@ -32,7 +30,9 @@ class Match(Model):
 
     def find_is_matched(self,friend_id,user_id):
         query = "SELECT * from friends WHERE friend_id = %s AND is_match = 'YES' AND user_id = %s"
-        data = [user_id,friend_id]
+        data = [friend_id,user_id]
         return self.db.query_db(query,data)
 
-    # def find_matches (self)
+#After the add match
+#Take that friend id
+#Go through friends table and see if that friend matched the user id

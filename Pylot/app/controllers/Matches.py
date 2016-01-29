@@ -13,19 +13,27 @@ class Matches(Controller):
         destination = '/home/' + str(current_user['id'])
         return redirect (destination)
 
+
+# begin like/dislike buttons---------->>>
+
     def home(self,friend_id):
         #select statement that picks a random id
         #if that match value == null && location is within range
         #then bring up the new picture
         current_user = self.models['Match'].get_user_by_id(friend_id)
-
+        print current_user['profile_info']
+        print session['id']
+        # print session['latitude']
+        # print session['longitude']
         user_info = self.models['User'].get_location_by_id(session['id'])
-        user_location = str(user_info['latitude']) + ',' + str(user_info['longitude'])
-        friend_location = str(current_user['latitude']) + ',' + str(current_user['longitude'])
-
-        picture = "https://graph.facebook.com/v2.5/" + current_user['clientID'] + "/picture?width=350&height=350"
+        user_location = user_info['latitude'] + ',' + user_info['longitude']
+        friend_location = current_user['latitude'] + ',' + current_user['longitude']
+        print user_info
+        print user_location
+        print friend_location
+        print (vincenty(user_location, friend_location).miles)
         distance = (vincenty(user_location, friend_location).miles)
-        return self.load_view('home.html', current_user=current_user, distance = distance, picture=picture)
+        return self.load_view('home.html', current_user=current_user, distance = distance)
 
     def process_match(self,friend_id):
         match_info = {
@@ -33,7 +41,12 @@ class Matches(Controller):
             "friend_id": friend_id,
             "is_match": request.form['is_match']
         }
-        if self.models['Match'].add_match(match_info)['match'] == True:
-            return redirect('/messages_page')
-        else: 
-            return redirect ('/process_home')
+        self.models['Match'].add_match(match_info)
+
+        return redirect ('/process_home')
+
+
+# end like/dislike buttons ----------->>>
+
+# if other person says yes = match
+# if no then = NULL

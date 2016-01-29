@@ -6,7 +6,6 @@ class Users(Controller):
         super(Users, self).__init__(action)
         self.load_model('User')
         self.load_model('Message')
-        self.load_model('Match')
 
     def index(self):
         return self.load_view('index.html')
@@ -22,7 +21,37 @@ class Users(Controller):
 
         status = self.models['User'].process_login(user_info)
         session['id'] = status['user']['id']
+        print 0
         return redirect('/process_home')
+
+    #     create_status = self.models['User'].register_user(user_info)
+
+    #     if create_status['status'] == True:
+    #         session['id'] = create_status['user']['id']
+    #         print session['id']
+    #         return redirect('/success')
+    #     else:
+    #         for message in create_status['errors']:
+    #             flash(message, 'regis_errors')
+    #         return redirect('/')
+
+    # def login(self):
+    #     user_info = {
+    #     'email' : request.form['email'],
+    #     'password' : request.form['password']
+    #     }
+
+    #     status = self.models['User'].login_user(user_info)
+
+    #     if status['status'] == False:
+    #         for message in status['errors']:
+    #             flash(message, 'Login_errors')
+    #         return redirect('/')
+    #     else:
+    #         session['id'] = status['user']['id']
+    #         print session['id']
+    #         return redirect('/process_home')
+
 
     def success(self):
         return self.load_view('success.html')
@@ -38,7 +67,6 @@ class Users(Controller):
         return redirect('/home')
 
     def communicate(self):
-        # self.models['Match'].find_is_matched(
         return self.load_view('messages.html')
 
     def messages_page(self):

@@ -36,11 +36,11 @@
 
 
 	<div class="friends">
-		<img src="{{picture}}" height="350" width="350">
+		<img src="/static/images/kerrin.png" height="300" width="180">
 		
 		<form action="/home/{{current_user['id']}}" method="post">
-			<input type="submit" class="btn btn-danger btn-sm" value="NO" name="is_match">
-      <input type="submit" class="btn btn-success btn-lg" value="YES" name="is_match">
+			<input type="submit" class="btn btn-danger btn-sm" value="X" name="is_match">
+      <input type="submit" class="btn btn-success btn-lg" value="√" name="is_match">
 		</form>
 
 		<br>
@@ -53,6 +53,7 @@
 		</div>
 
     <p>{{current_user['profile_info']}}<p>
-
+		<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+	</div>
 </body>
 </html>
