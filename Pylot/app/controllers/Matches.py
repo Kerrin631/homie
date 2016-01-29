@@ -26,8 +26,8 @@ class Matches(Controller):
         try:
             current_user = self.models['Match'].get_user_by_id(friend_id)
             friend_location = str(current_user['latitude']) + ',' + str(current_user['longitude'])
-            user_location = str(user_info['latitude']) + ',' + str(user_info['longitude'])
             user_info = self.models['User'].get_location_by_id(session['id'])
+            user_location = str(user_info['latitude']) + ',' + str(user_info['longitude'])
             distance = (vincenty(user_location, friend_location).miles)
             pic = "https://graph.facebook.com/v2.5/" + str(current_user['clientID']) + "/picture?width=350&height=350"
 
