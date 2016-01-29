@@ -3,6 +3,11 @@
 <head>
 	<title>Homie - Profile</title>
 
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+<!-- 	<link rel="stylesheet" href="/static/css/styles.css" type="text/css"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
     <!-- Latest compiled and minified CSS -->
@@ -13,6 +18,7 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 
     <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
 
@@ -39,6 +45,7 @@
 
 </head>
 <body>
+<<<<<<< HEAD
 	<!-- <div class="container col-md-12"> -->
 	<div class="sidebar col-lg-2 col-md-3 col-sm-12 col-xs-12 pull-left">
       <img src="/static/images/logo1.png" alt="logo.png" class="img-circle">
@@ -59,16 +66,38 @@
 
 		<button class="btn btn-info center-block" id='getLoc'>Allow</button>
 			<p id="demo" value='demo'></p>
- -->
+
 
 	<h4 class="text-center text-info">Allow Homie to access your location?</h4>
 
-<button class="btn btn-info center-block" id='getLoc'>Allow</button>
-<h3 class="text-center text-success"id="demo" value='demo'></h3>
-			<!-- <p id="demo" value='demo'></p> -->
+
 
 
 	<div class="form-group col-md-10">
+
+	<div class="form-group col-md-10 pull-right">
+
+	<!-- <div class="container col-md-12"> -->
+		<div class="sidebar col-md-1.5">
+	      <img src="/static/images/logo1.png" alt="logo.png" class="img-circle">
+	      <ul class="nav nav-pills nav-stacked span3" id="sidebar1">
+	        <li><a href="/home">Home</a></li>
+	        <li><a href="/messages_page">Messages</a></li>
+	        <li class="active"><a href="/profile">Profile</a></li>
+	        <li><a href="/about">About</a></li>
+					<li><a href="/contact">Contact Us</a></li>
+	        <li><a href="/team">Team</a></li>
+	        <li><a href="/logout">Log Out</a></li>
+	      </ul>
+	  </div>
+
+	<div class="form-group col-md-10 pull-right" id="content">
+		<h1 class="text-center">Profile</h1>
+		<p class="text-center">Allow Homie to access your location?</p>
+
+		<button class="btn btn-info center-block" id='getLoc'>Allow</button>
+			<h3 class="text-center text-success"id="demo" value='demo'></h3>
+
 
 			<form action="/about_me" method="post" id="location">
 				About Me:<input type="textarea" class="form-control" rows="5" name="content" placeholder="Tell me about yourself..."><br>
@@ -130,10 +159,10 @@
 				$('#long').val(longitude);
 				$('#lat').val(latitude);
 
-			    x.innerHTML = "Latitude: " + position.coords.latitude +
-			    "<br>Longitude: " + position.coords.longitude;
+
 
 			    x.innerHTML = "Thank you for sharing your location!"
+
 
 			}
 			// ajax
