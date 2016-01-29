@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Homie - Messages</title>
-<link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -11,23 +11,23 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
 </head>
 <body>
-	<div class="container col-md-2 pull-left sidebar" style="inline-block">
-		<img src="/static/images/logo.png" alt="logo"><br>
 
-		<a href="/profile"><button type="button" class="btn btn-primary">Profile</button></a><br>
-
-
-		<a href="/friends_page"><button type="button" class="btn btn-primary">Find Friends</button></a><br>
-
-
-		<a><button type="button" class="btn btn-default" disabled="disabled">Messages</button></a>
-
-		<a href="/log_out"><button type="button" class="btn btn-primary">Log Out</button></a><br>
-
-
-	</div>
+	<div class="sidebar col-lg-2 col-md-3 col-sm-12 col-xs-12 pull-left">
+			<img src="/static/images/logo1.png" alt="logo.png" class="img-circle img-responsive center-block" >
+      <ul class="nav nav-pills nav-stacked span3" id="sidebar1">
+        <li><a href="/home">Home</a></li><br>
+        <li class="active"><a href="/messages_page">Messages</a></li><br>
+        <li ><a href="/profile">Profile</a></li><br>
+        <li><a href="/about">About</a></li><br>
+        <li><a href="/contact">Contact Us</a></li><br>
+        <li><a href="/team">Team</a></li><br>
+        <li><a href="/logout">Log Out</a></li><br>
+      </ul>
+    </div>
 
 	<div class="container col-md-9 messages" style="inline-block">
 		<nav>
